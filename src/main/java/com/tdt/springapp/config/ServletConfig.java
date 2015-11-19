@@ -14,7 +14,7 @@ import java.util.List;
 
 @Configurable
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.pc.smart.web.controller"})
+@ComponentScan(basePackages = {"com.tdt.springapp.controller"})
 public class ServletConfig  extends WebMvcConfigurerAdapter{
 
     @Override
@@ -28,8 +28,8 @@ public class ServletConfig  extends WebMvcConfigurerAdapter{
     public InternalResourceViewResolver viewResolver() {
 
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/views/");
-        viewResolver.setSuffix(".jsp");
+        viewResolver.setPrefix("/WEB-INF/pages/");
+        viewResolver.setSuffix(".html");
         return viewResolver;
     }
 

@@ -29,7 +29,7 @@ public class ServletConfig  extends WebMvcConfigurerAdapter{
 
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/pages/");
-        viewResolver.setSuffix(".html");
+        viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
 

@@ -2,10 +2,7 @@ package com.tdt.springapp.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -22,6 +19,7 @@ import java.util.Properties;
 @EnableJpaRepositories(basePackages = {"org.pc.smart.domain.dao"}, transactionManagerRef = "transactionManager")
 @EnableTransactionManagement
 @PropertySource("classpath:application.properties")
+@Import(SocialSigninConfig.class)
 public class RootConfig extends AnnotationConfigApplicationContext {
 
     @Autowired

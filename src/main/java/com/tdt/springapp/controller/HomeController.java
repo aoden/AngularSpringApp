@@ -9,6 +9,6 @@ public class HomeController {
     @RequestMapping("/")
     public String home() {
 
-        return "redirect:/index.html";
+        return "index";
     }
 }
